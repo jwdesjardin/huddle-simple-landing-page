@@ -83,7 +83,7 @@ The first method i used was the flex-column method. In the mobile view I created
   width: 100%;
 }
 ```
-then... 
+then within the desktop and larger media query... 
 ```css
 .flex-column {
   flex-direction: row;
@@ -115,7 +115,7 @@ While this method works I prefer to use CSS grid to make this responsive. The Gr
 }
 ```
 
-then...
+then within the desktop and larger media query... 
 
 ```css
 .desktop-2cols {
@@ -135,6 +135,6 @@ I want to continue to document challenges and successes that i come across in my
 ## Author
 
 - Website - [Joey Desjardin](https://www.joeydesjardin.com)
-- Frontend Mentor - [@yjwdesjardin](https://www.frontendmentor.io/profile/jwdesjardin)
+- Frontend Mentor - [@jwdesjardin](https://www.frontendmentor.io/profile/jwdesjardin)
 - Twitter - [@joey_desjardin](https://twitter.com/joey_desjardin)
 
