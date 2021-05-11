@@ -140,7 +140,8 @@ body {
 
 .SOCIAL-LINKS_link:hover {
   transform: scale(.9);
-  box-shadow: 0px 6px 3px rgba(0,0,0,.2);
+  color: var(--soft-magenta);
+  border: 1px solid var(--soft-magenta);
 }
 
 .SOCIAL-LINKS_link i {
@@ -167,7 +168,7 @@ body {
 
   .PAGE-CONTAINER {
     background-image: url(./images/bg-desktop.svg);
-    background-size: cover;
+    background-size: fit;
   }
 
   .CONTENT-CONTAINER {
@@ -177,7 +178,8 @@ body {
 
   .TITLE_img {
     max-width: 240px;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
   }
 
   .desktop-2cols {
