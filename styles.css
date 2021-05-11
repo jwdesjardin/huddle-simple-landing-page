@@ -78,10 +78,32 @@ body {
 .TEXT-CONTENT_button {
   color: var(--violet);
   padding: 1rem 6rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
   border-radius: 200px;
   border: none;
   max-width: 230px;
   box-shadow: 2px 2px 6px  rgba(0,0,0, .3);
+}
+
+.SOCIAL-LINKS {
+ color: white;
+ display: flex;
+ justify-content: center;
+ margin: 2rem;
+}
+
+.SOCIAL-LINKS_link {
+  margin-right: 10px;
+  padding: 6px;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.SOCIAL-LINKS_link i {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
 }
 
