@@ -39,20 +39,28 @@ body {
   align-items: center;
 }
 
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  width: 100%; 
+}
+
 
 /* page styles */
 
 .PAGE-CONTAINER {
-  height: 100vh;
   background-color: var(--violet);
   background-image: url(./images/bg-mobile.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 2em;
+  padding: 0 2em;
+  height: 100%;
+  min-height: 100vh;
 }
 
 
 .TITLE_img {
+  margin-top: 2rem;;
   max-width: 140px;
 }
 
@@ -95,6 +103,18 @@ body {
   border: none;
   max-width: 230px;
   box-shadow: 0px 6px 4px  rgba(0,0,0, .3);
+  transition: all .2s linear;
+  cursor: pointer;
+}
+
+.TEXT-CONTENT_button:hover {
+  background-color: var(--soft-magenta);
+  color: white;
+  transform: scale(.9);
+}
+.TEXT-CONTENT_button:focus {
+  border: 1px solid var(--violet);
+  
 }
 
 .SOCIAL-LINKS {
@@ -111,8 +131,19 @@ body {
   border-radius: 50%;
   width: 36px;
   height: 36px;
-  
+  transition: all .2s linear;
+  cursor: pointer;
 }
+
+.SOCIAL-LINKS_link > .fa-facebook-f {
+  margin-left: 5px;
+}
+
+.SOCIAL-LINKS_link:hover {
+  transform: scale(.9);
+  box-shadow: 0px 6px 3px rgba(0,0,0,.2);
+}
+
 
 .SOCIAL-LINKS_link i {
   width: 16px;
@@ -127,14 +158,11 @@ body {
 
 .split {
   flex-direction: row;
-  
 }
 
 .PAGE-CONTAINER {
   background-image: url(./images/bg-desktop.svg);
-  background-size: fit;
-  
-  
+  background-size: cover;
 }
 
 .CONTENT-CONTAINER {
@@ -175,5 +203,8 @@ body {
 }
 
 
+.attribution {
+  margin-top: 8rem;
+}
 
 }
