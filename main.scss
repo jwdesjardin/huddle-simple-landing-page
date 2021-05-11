@@ -1,0 +1,232 @@
+/* import the fonts that are need from google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+
+/* the values that can be accessed in any of our CSS classes */
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --mobile: 375px;
+  --desktop: 1440px;
+}
+
+/* setup global fonts and styles */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+/* utility styles */
+
+/* this class is col in mobile and flex row in desktop */
+/* This was used as an alternate method to the grid method for handling flex columns */
+/* .split {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.desktop-2cols {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@keyframes slide-from-left {
+  from{
+    transform: translateX(-15%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-right {
+  from{
+    transform: translateX(15%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+
+/* page styles */
+
+.PAGE-CONTAINER {
+  background-color: var(--violet);
+  background-image: url(./images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0 2em;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.TITLE {
+  animation: slide-from-right .5s ease-out;
+}
+
+.TITLE_img {
+  margin-top: 2rem;;
+  max-width: 140px;
+}
+
+.IMAGE {
+  width: 100%;
+  animation: slide-from-left .5s ease-out;
+  .IMAGE_img {
+    max-width: 100%;
+    margin: 3rem 0;
+  }
+}
+
+
+.TEXT-CONTENT {
+  width: 100%;
+  color: white;
+  font-weight: thin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  animation: slide-from-right .5s ease-out;
+  .TEXT-CONTENT_heading {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .TEXT-CONTENT_p {
+    font-size: 1rem;
+    padding: 5px;
+    line-height: 1.5;
+    
+  }
+  .TEXT-CONTENT_button {
+    color: var(--violet);
+    padding: 13px 80px;
+    margin: 1rem 0;
+    border-radius: 200px;
+    border: none;
+    max-width: 230px;
+    box-shadow: 0px 6px 4px  rgba(0,0,0, .3);
+    transition: all .2s linear;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--soft-magenta);
+      color: white;
+      transform: scale(.9);
+    }
+    &:focus {
+        border: 1px solid var(--violet); 
+    }
+  }
+  
+}
+
+
+.SOCIAL-LINKS {
+ color: white;
+ display: flex;
+ justify-content: center;
+ margin: 2rem;
+ animation: slide-from-right .5s ease-out;
+ .SOCIAL-LINKS_link {
+  margin-right: 10px;
+  padding: 6px;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  transition: all .2s linear;
+  cursor: pointer;
+  .fa-facebook-f {
+    margin-left: 5px;
+  }
+  &:hover {
+    transform: scale(.9);
+    color: var(--soft-magenta);
+    border: 1px solid var(--soft-magenta);
+  }
+  i {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+  }
+}
+}
+
+.ATTRIBUTION { 
+  font-size: 11px; 
+  text-align: center; 
+  width: 100%; 
+  a {
+    color: hsl(56, 71%, 49%);
+  }
+}
+
+
+/* media queries taking place when we get to desktop size */
+
+@media only screen and (min-width: 1440px) {
+
+  .desktop-2cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .PAGE-CONTAINER {
+    background-image: url(./images/bg-desktop.svg);
+    background-size: fit;
+  }
+
+  .CONTENT-CONTAINER {
+    margin: 0 auto;
+    max-width: var(--desktop);
+  }
+
+  .TITLE_img {
+    max-width: 240px;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  .TEXT-CONTENT{
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 2rem;
+    .TEXT-CONTENT_heading{
+      font-size: 3.2rem;
+    }
+    .TEXT-CONTENT_p{
+      font-size: 1.4rem;
+    }
+    .TEXT-CONTENT_button{
+      font-size: 1.4rem;
+    }
+  
+  }
+
+
+  .SOCIAL-LINKS {
+    float: right;
+  }
+
+  .ATTRIBUTION {
+    margin-top: 8rem;
+  }
+
+}
