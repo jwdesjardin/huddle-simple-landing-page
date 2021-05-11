@@ -32,11 +32,11 @@ body {
 
 /* this class is col in mobile and flex row in desktop */
 /* This was used as an alternate method to the grid method for handling flex columns */
-/* .split {
+.split {
   display: flex;
   flex-direction: column;
   align-items: center;
-} */
+}
 
 .desktop-2cols {
   display: grid;
