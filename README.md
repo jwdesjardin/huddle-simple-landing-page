@@ -26,11 +26,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./desktop-screenshot.jpg)
+![](./README_imgs/desktop-screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Github Repo - jwdesjardin](https://github.com/jwdesjardin/huddle-simple-landing-page)
+- Solution URL: [Github Repo](https://github.com/jwdesjardin/huddle-simple-landing-page)
 - Live Site URL: [Huddle Landing Page](https://jwdesjardin.github.io/huddle-simple-landing-page/)
 
 ## My process
@@ -64,8 +64,8 @@ I used this convention in naming my classes to keep my CSS organized. Each block
 One of the main challenges of this project is to find a way to make the main image and text content to be side my side on desktop sized screens and stacked on top of each other on mobile sized screens. 
 
 
-![](./desktop-design-marked.jpg)
-![](./mobile-design-marked.jpg)
+![](./README_imgs/desktop-design-marked.jpg)
+![](./README_imgs/mobile-design-marked.jpg)
 
 The first method i used was the flex-column method. In the mobile view I created a flexbox with the direction of column and the widths of the children take up 100% of the screen. In the media query for desktop screens and larger i would switch the direction to row and the percentages of the children to 50% giving the desired responsive effect. 
 
