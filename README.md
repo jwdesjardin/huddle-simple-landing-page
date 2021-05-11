@@ -61,13 +61,10 @@ I used this convention in naming my classes to keep my CSS organized. Each block
 
 #### CSS Grid and Flexbox
 
-One of the main challenges of this project is to find a way to make the main image and text content to be side my side on desktop sized screens and stacked on top of each other on mobile sized screens. 
+One of the main challenges of this project is to find a way to make the main image and text content to be side my side on desktop sized screens and stacked on top of each other on mobile sized screens.
 
-
-![](./README_imgs/desktop-design-marked.jpg)
-<img src="./README_imgs/mobile-design-marked.jpg" alt="alt text" width="100">
-[[./README_imgs/desktop-design-marked.jpg|width=400px]]
-
+<img src="./README_imgs/mobile-design-marked.jpg" alt="mobile columns" width="100">
+<img src="./README_imgs/desktop-design-marked.jpg" alt="desktop columns" width="400">
 
 The first method i used was the flex-column method. In the mobile view I created a flexbox with the direction of column and the widths of the children take up 100% of the screen. In the media query for desktop screens and larger i would switch the direction to row and the percentages of the children to 50% giving the desired responsive effect. 
 
