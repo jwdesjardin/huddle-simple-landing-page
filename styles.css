@@ -18,22 +18,29 @@
   padding: 0;
 }
 
-h1, h2 {
+h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
 }
 
 /* utility styles */
 
 /* this class is col in mobile and flex row in desktop */
-.split {
+/* This was used as an alternate method to the grid method for handling flex columns */
+/* .split {
   display: flex;
   flex-direction: column;
   align-items: center;
+} */
+
+.desktop-2cols {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 
@@ -72,6 +79,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
 }
 
 .TEXT-CONTENT_heading {
@@ -172,12 +180,11 @@ body {
     margin-bottom: 4rem;
   }
 
-  .IMAGE{
-    width: 50%;
+  .desktop-2cols {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .TEXT-CONTENT{
-    width: 50%;
     align-items: flex-start;
     text-align: left;
     padding-left: 2rem;
